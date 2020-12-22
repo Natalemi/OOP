@@ -69,14 +69,14 @@ public:
 	~Birth() {}
 };
 
-class Adress
+class Address
 {
 	string street, city;
 	int house_number, apartment_number;
 public:
-	Adress() { street = city = ""; house_number = apartment_number = 0; }
+	Address() { street = city = ""; house_number = apartment_number = 0; }
 
-	Adress(string street, int house_number, int apartment_number, string city)
+	Address(string street, int house_number, int apartment_number, string city)
 	{
 		this->street = street;
 		this->house_number = house_number;
@@ -89,7 +89,7 @@ public:
 	int Get_apartment_number() { return apartment_number; }
 	string Get_city() { return city; }
 
-	void Set_Adress(string street, int house_number, int apartment_number, string city)
+	void Set_Address(string street, int house_number, int apartment_number, string city)
 	{
 		this->street = street;
 		this->house_number = house_number;
@@ -102,7 +102,7 @@ public:
 		cout << "Вулиця: " << Get_street() << "\nНомер будинку: " << Get_house_number() << "\nНомер квартири: " << Get_apartment_number() << "\nМісто: " << Get_city() << endl;
 	}
 
-	~Adress() {}
+	~Address() {}
 };
 
 class Number_phone
@@ -356,7 +356,7 @@ int main()
 
 	Name first1("Чернова", "Марія", "Іванівна");
 	Birth first2(2, 4, 1988);
-	Adress first3("Шевченка", 2, 6, "Луганськ");
+	Address first3("Шевченка", 2, 6, "Луганськ");
 	Number_phone first4("+380509289367");
 	Work first5("Дитячий садочок", "Вихователька", "з 6:00 до 16:00");
 	Email first6("sdfa@gmail.com");
@@ -369,7 +369,7 @@ int main()
 
 	Name second1("Генералов", "Іван", "Костянтинович");
 	Birth second2(1, 3, 1985);
-	Adress second3("Гоголя", 4, 3, "Сєверодонецьк");
+	Address second3("Гоголя", 4, 3, "Сєверодонецьк");
 	Number_phone second4("+380509868904");
 	Work second5("Школа №4", "Вчитель математики", "з 8:00 до 16:00");
 	Email second6("jkuik@gmail.com");
@@ -382,7 +382,7 @@ int main()
 
 	Name third1("Матвійчук", "Данило", "Михайлович");
 	Birth third2(5, 10, 1994);
-	Adress third3("Кірова", 10, 3, "Харків");
+	Address third3("Кірова", 10, 3, "Харків");
 	Number_phone third4("+380502317846");
 	Work third5("Продуктовий магазин 'Ластівка'", "Касир", "з 9:30 до 18:00");
 	Email third6("ythdr@gmail.com");
@@ -395,7 +395,7 @@ int main()
 
 	Name fourth1("Романова", "Ірина", "Дмитрівна");
 	Birth fourth2(5, 8, 1989);
-	Adress fourth3("Володимирська", 35, 7, "Рубіжне");
+	Address fourth3("Володимирська", 35, 7, "Рубіжне");
 	Number_phone fourth4("+380504327645");
 	Work fourth5("Кардіологічне відділення ЦМЛ", "Сестра-господиня", "з 8:00 до 15:30");
 	Email fourth6("th4wef@gmail.com");
@@ -408,7 +408,7 @@ int main()
 
 	Name fifth1("Куліков", "Іван", "Петрович");
 	Birth fifth2(6, 4, 1987);
-	Adress fifth3("Гагаріна", 87, 307, "Луганськ");
+	Address fifth3("Гагаріна", 87, 307, "Луганськ");
 	Number_phone fifth4("+38050257637");
 	Work fifth5("ТОВ Луганськгаз ЗБУТ", "Інспектор", "з 10:00 до 15:30");
 	Email fifth6("gyjftnf@gmail.com");
@@ -434,7 +434,7 @@ int main()
 	if (YESorNO == "Так" || YESorNO == "так") {
 		string name, surname, nickname; cout << "Напишіть прізвище, ім'я, по батькові через Enter:\n"; cin >> surname >> name >> nickname; Name sixth1; sixth1.Set_name(surname, name, nickname);
 		int day, month, year; cout << "Напишіть день, місяць, рік народження через Enter:\n"; cin >> day >> month >> year; Birth sixth2; sixth2.Set_Birth(day, month, year);
-		string street, city; int house_number, apartment_number; cout << "Напишіть вулицю, номер дому, номер квартири, місто через Enter:\n"; cin >> street >> house_number >> apartment_number >> city; Adress sixth3; sixth3.Set_Adress(street, house_number, apartment_number, city);
+		string street, city; int house_number, apartment_number; cout << "Напишіть вулицю, номер дому, номер квартири, місто через Enter:\n"; cin >> street >> house_number >> apartment_number >> city; Address sixth3; sixth3.Set_Address(street, house_number, apartment_number, city);
 		string number_phone; cout << "Напишіть номер телефону через Enter:\n"; cin >> number_phone; Number_phone sixth4; sixth4.Set_Number_phone(number_phone);
 		string company, position, opening_hours; cout << "Напишіть підприємство, посаду, години роботи через Enter:\n"; cin >> company >> position >> opening_hours; Work sixth5; sixth5.Set_Work(company, position, opening_hours);
 		string email; cout << "Напишіть електронну пошту через Enter:\n"; cin >> email; Email sixth6; sixth6.Set_Email(email);
